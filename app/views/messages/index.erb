@@ -4,7 +4,7 @@
 <% @messages.each do |message| %>
   <div class="message">
     <p>
-      <%= message.content %>
+      <%= message.content %><% if message.url %> <a href="<%= message.url %>"><%= message.url %></a><% end %>
     </p>
     <h3>
       <a href:="/messages/<%= message.id %>">
